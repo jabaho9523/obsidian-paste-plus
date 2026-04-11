@@ -2,6 +2,12 @@
 
 One plugin that makes Obsidian's paste key smarter. No setup, no learning curve — install it and every paste just works better.
 
+![Paste Plus demo](docs/demo.gif)
+
+## Before vs after
+
+![Paste Plus vs default paste](docs/comparison.png)
+
 ## What it does
 
 - **Paste a URL** → becomes a titled markdown link: `[Page Title](url)`

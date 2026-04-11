@@ -44,7 +44,8 @@ export const imageDetector: Detector = {
 		const created = await ctx.app.vault.createBinary(targetPath, buffer);
 
 		// Use Obsidian's own link generator so it respects user link settings (wiki vs md).
-		return ctx.app.fileManager.generateMarkdownLink(created, sourcePath);
+		// Prefix with "!" to make it an embed — works for both [[file]] and [alt](file) styles.
+		return `!${ctx.app.fileManager.generateMarkdownLink(created, sourcePath)}`;
 	},
 };
 
