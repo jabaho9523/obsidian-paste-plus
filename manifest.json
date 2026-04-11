@@ -1,0 +1,11 @@
+{
+	"id": "paste-plus",
+	"name": "Paste Plus",
+	"version": "0.1.0",
+	"minAppVersion": "1.4.0",
+	"description": "Smart paste for URLs, images, HTML, YouTube, and Twitter — one plugin, no setup.",
+	"author": "Jacob Holm",
+	"authorUrl": "https://github.com/jabaho9523",
+	"fundingUrl": "https://www.buymeacoffee.com/jabaho",
+	"isDesktopOnly": false
+}
