@@ -49,6 +49,13 @@ Open Settings → Community plugins → Paste Plus. You can:
 
 Paste Plus hooks the Obsidian `editor-paste` event and runs an ordered chain of detectors. The first detector that recognizes the clipboard content transforms it and inserts the result; if nothing claims the paste, Obsidian's default paste runs. If another paste plugin has already handled the event, Paste Plus gets out of the way.
 
+## Plus Plugin Family
+
+Paste Plus is part of the **Plus Plugin Family** for Obsidian:
+
+- **Paste Plus** — Smart paste: URLs become titled links, images get clean filenames, HTML converts to markdown, YouTube and Twitter links resolve to titles.
+- **[Vault Plus](https://github.com/jabaho9523/obsidian-vault-plus)** — Vault health dashboard: find and fix orphans, broken links, empty notes, duplicates, and more.
+
 ## Support
 
 If Paste Plus saves you time, you can support development here:
