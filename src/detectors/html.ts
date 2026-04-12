@@ -35,31 +35,35 @@ function getTurndown(): TurndownService {
 export const htmlDetector: Detector = {
 	id: "enableHtml",
 	enabled: (s) => s.enableHtml,
-	async run(ctx: PasteContext): Promise<string | null> {
-		const types = ctx.evt.clipboardData?.types;
-		if (!types || !Array.from(types).includes("text/html")) return null;
-
-		const html = ctx.evt.clipboardData?.getData("text/html");
-		if (!html) return null;
-
-		const plain = ctx.evt.clipboardData?.getData("text/plain") ?? "";
-
-		// Skip bare URL pastes — those belong to the URL detector (or default paste).
-		if (/^https?:\/\/\S+$/i.test(plain.trim())) return null;
-
-		// Skip trivial HTML that's just a wrapped plain-text node.
-		if (isTrivialHtml(html, plain)) return null;
-
-		try {
-			const md = getTurndown().turndown(html).trim();
-			if (!md) return null;
-			return md;
-		} catch (e) {
-			console.warn("[Paste Plus] turndown failed", e);
-			return null;
-		}
+	run(ctx: PasteContext): Promise<string | null> {
+		return Promise.resolve(convert(ctx));
 	},
 };
+
+function convert(ctx: PasteContext): string | null {
+	const types = ctx.evt.clipboardData?.types;
+	if (!types || !Array.from(types).includes("text/html")) return null;
+
+	const html = ctx.evt.clipboardData?.getData("text/html");
+	if (!html) return null;
+
+	const plain = ctx.evt.clipboardData?.getData("text/plain") ?? "";
+
+	// Skip bare URL pastes — those belong to the URL detector (or default paste).
+	if (/^https?:\/\/\S+$/i.test(plain.trim())) return null;
+
+	// Skip trivial HTML that's just a wrapped plain-text node.
+	if (isTrivialHtml(html, plain)) return null;
+
+	try {
+		const md = getTurndown().turndown(html).trim();
+		if (!md) return null;
+		return md;
+	} catch (e) {
+		console.warn("[Paste Plus] turndown failed", e);
+		return null;
+	}
+}
 
 function isTrivialHtml(html: string, plain: string): boolean {
 	// Strip wrapper/meta tags and whitespace, compare to plain text.
