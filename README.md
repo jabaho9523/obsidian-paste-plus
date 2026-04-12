@@ -55,6 +55,7 @@ Paste Plus is part of the **Plus Plugin Family** for Obsidian:
 
 - **Paste Plus** — Smart paste: URLs become titled links, images get clean filenames, HTML converts to markdown, YouTube and Twitter links resolve to titles.
 - **[Vault Plus](https://github.com/jabaho9523/obsidian-vault-plus)** — Vault health dashboard: find and fix orphans, broken links, empty notes, duplicates, and more.
+- **[Link Plus](https://github.com/jabaho9523/obsidian-link-plus)** — Unlinked mention scanner: find and convert unlinked mentions vault-wide with one-click or batch operations.
 
 ## Support
 
