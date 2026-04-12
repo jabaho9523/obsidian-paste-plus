@@ -64,4 +64,4 @@ If Paste Plus saves you time, you can support development here:
 
 ## License
 
-0BSD — do whatever you want with it.
+0BSD — copy, paste, ship. The license matches the plugin.
