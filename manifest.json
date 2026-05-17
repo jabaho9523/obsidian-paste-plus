@@ -1,7 +1,7 @@
 {
 	"id": "paste-plus",
 	"name": "Paste Plus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.5.7",
 	"description": "Smart paste for URLs, images, HTML, YouTube, and Twitter — one plugin, no setup.",
 	"author": "Jacob Holm",
