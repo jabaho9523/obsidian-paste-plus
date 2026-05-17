@@ -6,7 +6,7 @@ export async function fetchPageTitle(
 	stripPatterns: string[]
 ): Promise<string | null> {
 	const timeoutPromise = new Promise<null>((resolve) =>
-		setTimeout(() => resolve(null), timeoutMs)
+		window.activeWindow.setTimeout(() => resolve(null), timeoutMs)
 	);
 
 	const fetchPromise = (async (): Promise<string | null> => {
