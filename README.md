@@ -1,5 +1,7 @@
 # Paste Plus
 
+![Paste Plus](docs/hero.png)
+
 One plugin that makes Obsidian's paste key smarter. No setup, no learning curve — install it and every paste just works better.
 
 ![Paste Plus demo](docs/demo.gif)
